@@ -13,7 +13,7 @@ int main(int argc, char *argv[]) {
 	int score[SIZE];
 	
 	for (i=0; i<SIZE; i++)
-		grade[i]=rand()%100 + 1;
+		grade[i]=rand()%100;
 		
 	for (i=0; i<SIZE; i++)
 	score[i]=grade[i];

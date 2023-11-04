@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define SIZE 5
+#define N_STUDENT 5
 
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
@@ -9,17 +9,23 @@
 int main(int argc, char *argv[]) {
 	
 	int i;
-	int grade[SIZE];
-	int score[SIZE];
+	int a[N_STUDENT]={1,2,3,4,5};
+	int b[N_STUDENT]={1,2,3,4,5};
+	int flag=0;
 	
-	for (i=0; i<SIZE; i++)
-		grade[i]=rand()%100;
 		
-	for (i=0; i<SIZE; i++)
-	score[i]=grade[i];
-		
-	for(i=0; i<SIZE; i++)
-		printf("score[%d]=%d (grade:%i)\n", i, score[i], grade[i]);
-	 
+	for (i=0; i<N_STUDENT; i++)
+	{
+		if (a[i]!=b[i])
+		{
+			printf("array A and B are not the same\n");
+			flag=1;
+		}
+	}
+	
+	if (flag==0)
+		printf("array A and B are the same\n");
+	
+	
 	return 0;
 }
